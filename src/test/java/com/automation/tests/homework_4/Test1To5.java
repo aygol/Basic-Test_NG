@@ -1,9 +1,11 @@
-package com.automation.tests;
+package com.automation.tests.homework_4;
 
-import com.automation.BrowserUtils;
+
+
+import com.automation.utilities.BrowserUtils;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,8 +15,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.Arrays;
-import java.util.List;
 
 import static org.testng.Assert.assertTrue;
 
@@ -34,16 +34,16 @@ public class Test1To5 {
     @Test(description = "Verify that warning message displays when user enters invalid date of birth")
         public void invalidDateOfBirth(){
         driver.findElement(registration).click();
-        BrowserUtils.wait(4);
+
         driver.findElement(By.xpath("//*[@placeholder='MM/DD/YYYY']")).sendKeys("13/21/2020");
-        BrowserUtils.wait(4);
+
         WebElement warningElement = driver.findElement(warningMessageBy);
         assertTrue(warningElement.isDisplayed());
-        BrowserUtils.wait(4);
+
         String expected="The date of birth is not valid";
-        BrowserUtils.wait(4);
+
         String actual=warningElement.getText();
-        BrowserUtils.wait(5);
+
         Assert.assertEquals(actual,expected,"actual and expected not same");
 
 //Step 1. Go to “https://practice-cybertekschool.herokuapp.com”Step
