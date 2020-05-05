@@ -27,7 +27,7 @@ public void setUp(){
 
 
 
-    WebDriverManager.chromedriver().version("79").setup();
+    WebDriverManager.chromedriver().setup();
     driver = new ChromeDriver();
 
 }

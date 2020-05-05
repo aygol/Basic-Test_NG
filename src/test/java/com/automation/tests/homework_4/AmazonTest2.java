@@ -74,7 +74,7 @@ public void testingTitle() {
 
 
 
-        WebDriverManager.chromedriver().version("79").setup();
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get(url);
         driver.manage().window().maximize();
