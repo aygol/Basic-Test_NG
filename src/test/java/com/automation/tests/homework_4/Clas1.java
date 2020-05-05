@@ -7,7 +7,12 @@ public class Clas1 {
 
         System.out.println("Today is monday");
         System.out.println("Today is monday");
+
         System.out.println("Today is friday");
+
+
+        System.out.println("Today is monday");
+        System.out.println("Today is monday");
 
     }
 
